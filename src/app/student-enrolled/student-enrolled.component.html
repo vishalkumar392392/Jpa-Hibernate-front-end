@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="card-header">
+        Students Enrolled for {{course.name}}
+       </div>
+    <div class="card-body">
+     <table class="table table-striped">
+         <thead>
+           <tr>
+               <th>Id</th>
+               <th>Name</th>
+           </tr>  
+         </thead>
+         <tbody>
+
+            <tr *ngFor="let student of course.students">
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+            </tr>
+         </tbody>
+     </table>
+    </div>
+  </div>

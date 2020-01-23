@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-header">
+     Total Courses
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <table class="table table-striped">
+            <thead>
+               <tr>
+                   <th>Id</th>
+                   <th>Course</th>
+                   <th>Reviews</th>
+                   <th>Students Enrolled</th>
+                  
+               </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor ="let course of courses">
+
+                    <td>{{course.id}}</td>
+                    <td>{{course.name}}</td>
+                    <td><button (click)=getReviewsbyCourseId(course.id) type="button" class="btn btn-link" >Reviews</button></td>
+                    <td><button (click)=studentsEnrolled(course.id) type="button" class="btn btn-link" >Students</button></td>
+                </tr>
+
+            </tbody>
+        </table>
+       
+      </blockquote>
+    </div>
+  </div>
+

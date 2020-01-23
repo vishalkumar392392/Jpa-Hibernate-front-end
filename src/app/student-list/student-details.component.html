@@ -1,0 +1,21 @@
+<h2>students</h2>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Passport No.</th>
+        <th scope="col">Enrolled Courses</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let student of students">
+        <td>{{student.name}}</td>
+        <td>{{student.passport.number}}</td>
+        <td><button (click)="getEnrolledCourses(student.id)" class="btn btn-link">courses</button></td>
+     </tr>
+    </tbody>
+  </table>
+
+
