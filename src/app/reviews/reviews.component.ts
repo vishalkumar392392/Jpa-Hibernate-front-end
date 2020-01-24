@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Course } from '../course';
 import { Service } from '../service';
@@ -13,7 +13,7 @@ export class ReviewsComponent implements OnInit {
 
   id:number;
   course:Observable<Course>;
-  constructor(private route:ActivatedRoute,private service:Service) { }
+  constructor(private route:ActivatedRoute,private service:Service,private router:Router) { }
 
   ngOnInit() {
 
@@ -24,6 +24,10 @@ export class ReviewsComponent implements OnInit {
       console.log(this.course)
     })
 
+  }
+
+  addReview(id:number){
+   this.router.navigate(['add-review',id])
   }
 
 }

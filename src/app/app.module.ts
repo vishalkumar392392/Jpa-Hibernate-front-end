@@ -15,6 +15,9 @@ import { CourseListComponent } from './course-list/course-list.component';
 import { StudentEnrolledComponent } from './student-enrolled/student-enrolled.component';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { EnrollCoursesComponent } from './enroll-courses/enroll-courses.component';
+import { NewEnrollCoursesComponent } from './new-enroll-courses/new-enroll-courses.component';
+import { AddCourseComponent } from './add-course/add-course.component';
+import { AddReviewComponent } from './add-review/add-review.component';
 
 const routes:Routes=[
   {path:"",component:WelcomeComponent},
@@ -24,7 +27,10 @@ const routes:Routes=[
   {path:"courses/:id",component:CoursesComponent},
   {path:"reviews/:id",component:ReviewsComponent},
   {path:"add-student",component:AddStudentComponent},
-  {path:"enroll-courses/:id",component:EnrollCoursesComponent}
+  {path:"enroll-courses/:id",component:EnrollCoursesComponent},
+  {path:"new-enroll-courses/:id",component:NewEnrollCoursesComponent},
+  {path:"add-course",component:AddCourseComponent},
+  {path:"add-review/:id",component:AddReviewComponent},
 ]
 
 @NgModule({
@@ -38,7 +44,10 @@ const routes:Routes=[
     CourseListComponent,
     StudentEnrolledComponent,
     AddStudentComponent,
-    EnrollCoursesComponent
+    EnrollCoursesComponent,
+    NewEnrollCoursesComponent,
+    AddCourseComponent,
+    AddReviewComponent
   ],
   imports: [
     BrowserModule,

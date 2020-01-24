@@ -32,7 +32,8 @@ export class EnrollCoursesComponent implements OnInit {
   enrollNow(course_id:any){
 
     this.service.getEnrolledToCourse(this.student_id,course_id).subscribe(data=>{
-      console.log(data)
+      console.log(data);
+      this.router.navigate(['courses',this.student_id]);
 
     })
     

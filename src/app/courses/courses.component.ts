@@ -38,6 +38,9 @@ export class CoursesComponent implements OnInit {
   enrollCourses(id:number){
     this.router.navigate(['enroll-courses',id]);
   }
-
+  
+  newEnrollCourses(id:number){
+    this.router.navigate(['new-enroll-courses',id]);
+  }
 
 }
